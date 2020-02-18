@@ -1,0 +1,378 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Open Data Day Paris 2020</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+
+    <style>
+        html, body, table {
+            margin:0;
+            font-family: 'Raleway', sans-serif;
+            font-size:1.2rem;
+            line-height:2rem;
+        }
+        .slide {
+            width:100%;
+            height:60rem;
+            position:relative;
+        }
+        .mainText {
+            position:absolute;
+            right:0;
+            width:500px;
+            margin-right:5%;
+            transform: translate(0,-50%);
+            font-size: 0.9em;
+            border-style: solid;
+            border-width: 0.02px;
+            border-color: #333;
+            /*border:0.5px solid white;*/
+            background: rgba(0,0,0,0.5);
+            padding:5px;
+            /*margin-left:50%;
+            transform: translate(-400px,-50%);*/
+        }
+        td.subtitle {
+            vertical-align:top;
+            text-align:left;
+            padding-right:4rem;
+        }
+        input {
+            font-size:1.2rem;
+        }
+        #imageContainer img {
+            /*filter:grayscale(90%) contrast(120%) opacity(50%);
+            -webkit-filter:grayscale(10%) contrast(120%) opacity(50%);*/
+            min-height:100%;
+            min-width:100%;
+            /*position:absolute;
+            top:0;
+            left:0;*/
+        }
+        #imagesCont {
+            min-height:100%;
+            min-width:100%;
+        }
+        #doge {
+            width:100%;
+            height:100%;
+            overflow:hidden;
+            z-index:1;
+            position:relative;
+            bottom:0em;
+            left:77%;
+            transform: rotate(14deg);
+            opacity:0.6;
+        }
+        a {
+            text-decoration: none;
+            color:white;
+            border-style:solid;
+            border-width: 0px 0px 0.1px 0px;
+            padding-bottom:3px;
+            opacity:0.95;
+        }
+        a:hover,a:focus,a:active {
+            /*text-decoration: underline;*/
+            text-decoration:none;
+            border-style:solid;
+            border-width: 0px 0px 0.1px 0px;
+            padding-bottom:3px;
+            opacity:1;
+            /*transition: all .3s ease-in;*/
+        }
+        #page2 a {
+            font-weight:500;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.5s;
+        }
+        #page3 a:hover {
+            font-weight:500;
+            border-style:solid;
+            border-bottom: 1px solid white;
+            padding-bottom:3px;
+            opacity: 1;
+        }
+        #aImage {
+            max-width:fit-content;
+            filter: contrast( 120% ) brightness(50%) ; 
+        }
+        #pattern {
+            filter: contrast( 120% ) brightness(50%) ;
+        }
+        #intro a {
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.5s;
+        }
+        #intro a:hover {
+            border-style:solid;
+            border-bottom: 1px solid white;
+            padding-bottom:3px;
+            opacity: 1;
+        }
+        a#githubnaat {
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.5s;
+        }
+        a#githubnaat:hover {
+            border-style:solid;
+            border-bottom: 1px solid white;
+            padding-bottom:3px;
+            opacity: 1;
+        }
+        p.reference {
+            color: black;
+            opacity: 0.5;
+        }
+        p {
+            font-weight:100;
+            color:white;
+        }
+        #thanks b {
+            font-weight:400;
+        }
+        #map iframe {
+            filter:grayscale(80%) contrast(120%) opacity(100%);
+            -webkit-filter:grayscale(80%) contrast(120%) opacity(100%);
+            min-width:100%;
+            min-height:100%;
+            pointer-events: none;
+            position: relative;
+        }
+        #map iframe.clicked {
+            pointer-events: auto;
+        }
+
+        @-moz-keyframes sc-down-a {
+        0% {
+            -webkit-transform: translateY(0px) rotate(45deg);
+            -moz-transform: translateY(0px) rotate(45deg);
+            -o-transform: translateY(0px) rotate(45deg);
+            -ms-transform: translateY(0px) rotate(45deg);
+            transform: translateY(0px) rotate(45deg);
+        }
+        100% {
+            -webkit-transform: translateY(2px) rotate(45deg);
+            -moz-transform: translateY(2px) rotate(45deg);
+            -o-transform: translateY(2px) rotate(45deg);
+            -ms-transform: translateY(2px) rotate(45deg);
+            transform: translateY(2px) rotate(45deg);
+        }
+        }
+        @-webkit-keyframes sc-down-a {
+        0% {
+            -webkit-transform: translateY(0px) rotate(45deg);
+            -moz-transform: translateY(0px) rotate(45deg);
+            -o-transform: translateY(0px) rotate(45deg);
+            -ms-transform: translateY(0px) rotate(45deg);
+            transform: translateY(0px) rotate(45deg);
+        }
+        100% {
+            -webkit-transform: translateY(2px) rotate(45deg);
+            -moz-transform: translateY(2px) rotate(45deg);
+            -o-transform: translateY(2px) rotate(45deg);
+            -ms-transform: translateY(2px) rotate(45deg);
+            transform: translateY(2px) rotate(45deg);
+        }
+        }
+        @-o-keyframes sc-down-a {
+        0% {
+            -webkit-transform: translateY(0px) rotate(45deg);
+            -moz-transform: translateY(0px) rotate(45deg);
+            -o-transform: translateY(0px) rotate(45deg);
+            -ms-transform: translateY(0px) rotate(45deg);
+            transform: translateY(0px) rotate(45deg);
+        }
+        100% {
+            -webkit-transform: translateY(2px) rotate(45deg);
+            -moz-transform: translateY(2px) rotate(45deg);
+            -o-transform: translateY(2px) rotate(45deg);
+            -ms-transform: translateY(2px) rotate(45deg);
+            transform: translateY(2px) rotate(45deg);
+        }
+        }
+        @keyframes sc-down-a {
+        0% {
+            -webkit-transform: translateY(0px) rotate(45deg);
+            -moz-transform: translateY(0px) rotate(45deg);
+            -o-transform: translateY(0px) rotate(45deg);
+            -ms-transform: translateY(0px) rotate(45deg);
+            transform: translateY(0px) rotate(45deg);
+        }
+        100% {
+            -webkit-transform: translateY(2px) rotate(45deg);
+            -moz-transform: translateY(2px) rotate(45deg);
+            -o-transform: translateY(2px) rotate(45deg);
+            -ms-transform: translateY(2px) rotate(45deg);
+            transform: translateY(2px) rotate(45deg);
+        }
+        }
+        .btn-scroll-down {
+            width: 100px;
+            height: 50px;
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 10;
+            -webkit-transition: display 0.5s easy-in-out;
+            -moz-transition: display 0.5s easy-in-out;
+            -o-transition: display 0.5s easy-in-out;
+            -ms-transition: display 0.5s easy-in-out;
+            transition: display 0.5s easy-in-out;
+        }
+        .btn-scroll-down:before,
+        .btn-scroll-down:after {
+            content: '';
+            display: block;
+            border-bottom: 1px solid #fff;
+            border-right: 1px solid #fff;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            margin: auto;
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+        .btn-scroll-down:before {
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+        }
+        .btn-scroll-down:after {
+            width: 30px;
+            height: 30px;
+            bottom: 35px;
+            -webkit-animation: sc-down-a 0.3s infinite alternate;
+            -moz-animation: sc-down-a 0.3s infinite alternate;
+            -o-animation: sc-down-a 0.3s infinite alternate;
+            -ms-animation: sc-down-a 0.3s infinite alternate;
+            animation: sc-down-a 0.3s infinite alternate;
+        }
+    </style>
+
+    <script src="./libs/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+    <div class="row" style="width:100%;height:100%">
+        <div class="col sidespace"></div>
+            <div class="col">
+
+                <!--page 1: Landing page-->
+                <div style="width:100%;position:relative">
+                    <div id="imageContainer" style="width:100%;height:40em;overflow:hidden;background-color:black">
+                        <img id="aImage"/>
+                    </div>
+                    <div id="intro" style="color:white;position:absolute;top:1em;right:15%;text-align:left;padding:0.25em">
+                        <h1 style="font-family:Raleway;font-size:2.9rem;font-weight:100;text-align:left">Open Data Day</h1>
+                        <h2 style="font-family:Oswald;font-size:2.4rem;font-weight:700;text-align:left;margin-bottom:1em;transform:translate(0,-15px);">Paris, 7 March 2020</h2>
+                        <p style="color:white;font-family:Raleway;font-size:1.4rem;font-weight:300;line-height:2.5;">SAVE THE DATE AND JOIN US</p><br/>
+                    </div>
+                    <span class="btn-scroll-down scroll"></span>
+                </div>
+
+                <!--page 2: Open Data Day Paris introduction-->
+                <div class="slide" id="page2" style="color:white;background-color:#333">
+                    <div class="mainText" style="padding-left:2em;padding-right:2em;line-height:1.5em;">
+                        <p><a href="http://opendataday.org/#what" target="_blank">International Open Data Day</a> is an annual event that promotes awareness and use of open data. Let's connect with the community around the globe and use open data to build new solutions to issues in our communities. Join us for a hackathon around open data, data analysis and visualisation. </p>
+
+                        <p>You can <a href="http://opendataday.org/#resources" target="_blank">select your own dataset</a>, discuss a project and recruit a team of collaborators on site for testing new creative ideas.
+                        This workshop is also an opportunity to learn methods, develop skills and collaborate with other participants.</p>
+
+                        <p>Find us at <a href="https://lesgrandsvoisins.org/" target=_blank">Les Grands Voisins</a>, from 10am</p>
+                        <!--<div id="doge" style="background:none;">
+                            <img id="dogeGif" src="./img/dogeLove.gif" alt="animated gif" repeat style="width:10%;overflow:hidden">
+                        </div>-->
+                    </div>
+                    <div id="imagesCont" style="width:100%;height:40em;overflow:hidden;background-color:#111">
+                        <div id="imageContainer" style="width:100%;height:40em;overflow:hidden;background-color:#111">
+                            <img id="anatomyOfChange" src="./img/2_grands-voisins_.jpg"/>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--page 3: Map-->
+                <div class="slide" id="map" style="color:white;background-color:#333">
+                    <p style="font-size:0.5em;text-align:center;margin:0;padding:0;background-color: #000;font-weight:300;">Double click to zoom in on map</p>
+                    <!--<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1GWzGW6nlG4lxKEXs-NLL5EfPHEGpYg_v"></iframe>-->
+                    <iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=48.8376011,2.335307&amp;q=74%20Avenue%20Denfert-Rochereau%2C%2075014%20Paris+(OpenDataDayParis)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/coordinates.html">latitude longitude finder</a></iframe>
+                </div>
+
+
+                <!--page 4: Organisation-->
+                <div class="slide" style="color:white;background-color:#FFF">
+                    <div class="mainText" id="thanks" style="width:360px;font-size:1rem;font-weight:100;left:0;margin-left:5%;padding-left:2em;padding-right:2em;line-height:1.5em;z-index:10">
+                        <p>Organisation</p>
+                        <p>Katja <b>Heuer</b>, Liubov <b>Tupikina</b>, <br>Roberto <b>Toro</b>, & Marc <b>Santolini</b></p>
+                            <img style="width:1rem;transform:translate(0,3px);margin-right:5px;" src="./img/twitter_white.png" /img>@katjaqheuer</br>
+                            <img style="width:1rem;transform:translate(0,3px);margin-right:5px;" src="./img/twitter_white.png" /img>@luyibov</br>
+                            <img style="width:1rem;transform:translate(0,3px);margin-right:5px;" src="./img/twitter_white.png" /img>@r3rt0</br>
+                            <img style="width:1rem;transform:translate(0,3px);margin-right:5px;" src="./img/twitter_white.png" /img>@msantolini </br>
+                            </br>
+                        </p>
+                        <p>Many thanks to</p>
+                        <img href="https://lesgrandsvoisins.org/" target="_blank" src="img/logo_les-grands-voisins.png"/>
+                        <br/><br/>
+                    </div>
+                    <div id="imageContainer" style="width:100%;height:40em;overflow:hidden;background-color:white">
+                        <img id="pattern" src="https://generative-placeholders.glitch.me/image?width=800px&height=550px&style=circles">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script>
+
+        /* randomly select background image for page 1 */
+
+        $("#imageContainer").height($(window).height());
+        $(".slide").height($(window).height());
+        $(".slide .mainText").css({marginTop:$(window).height()/2});
+
+        var gallery=[
+            {image:"./img/a.jpg"},
+            {image:"./img/b.jpg"},
+            {image:"./img/c.jpg"},
+            {image:"./img/d.jpg"},
+            {image:"./img/e.jpg"},
+        ];
+        var    a=Math.floor(Math.random()*gallery.length);
+
+        $("#aImage").attr("src",gallery[a].image);
+
+        setInterval(function() {
+            a=Math.floor(Math.random()*gallery.length);
+            $("#aImage").fadeOut(2000,function() {
+                $("#aImage").attr("src",gallery[a].image);
+                $("#aImage").fadeIn(2000);
+            });
+        },6000);
+
+        for(i=0;i<gallery.length;i++) {
+            var img = new Image();
+            img.src = gallery[i].image;
+        }
+
+
+        /* enable click to zoom in on the map */
+
+        $('#map').click(function(){
+            $(this).find('iframe').addClass('clicked');
+        })
+        .mouseleave(function(){
+            $(this).find('iframe').removeClass('clicked');
+        });
+
+    </script>
+
+</body>
+</html>
