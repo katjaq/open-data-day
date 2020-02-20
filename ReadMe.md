@@ -1,4 +1,4 @@
-<img src="./img/header-open-data-day.png" width="750" />
+<img src="./img/header-open-data-day.png" width="900" />
 
 
 # International Open Data Day: Paris Hub 2020
