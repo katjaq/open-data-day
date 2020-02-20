@@ -12,7 +12,7 @@ Here, we host the website for the Open Data Day Paris 2020.
 
 Check our [website](https://github.com/katjaq/open-data-day)!  
 
-Join us at [Les Grands Voisins](https://lesgrandsvoisins.org/), from 10am.  
+Join us at [Les Grands Voisins Café](https://lesgrandsvoisins.org/les-lieux-ouverts/bar-et-restaurant/le-restaurant-oratoire/), from 10am.  
 
 Select your own [dataset](http://opendataday.org/#resources), and join the [International Open Data Day](http://opendataday.org/#what)!
 
