@@ -1,4 +1,4 @@
-![open data day](./img/header-open-data-day.png)
+![open data day](./img/header-open-data-day.png | width=100)
 
 # International Open Data Day: Paris Hub 2020
 Katja Heuer, Liubov Tupikina, Roberto Toro, Marc Santolini.  
